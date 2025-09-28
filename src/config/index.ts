@@ -1,10 +1,10 @@
 const config = {
   production: {
-    url: "https://our-domain-url.com/",
+    url: "https://euphonious-pegasus-3d29f1.netlify.app/",
     apiUrl: "https://reqres.in/api/",
   },
   development: {
-    url: "https://our-domain-url.com/",
+    url: "https://euphonious-pegasus-3d29f1.netlify.app/",
     apiUrl: "https://reqres.in/api/",
   }
 };
