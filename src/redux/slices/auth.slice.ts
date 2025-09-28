@@ -15,17 +15,15 @@ const initialState: LoginState = {
   error: null,
 };
 
-
 export const RegisterAction = createAsyncThunk(
   "auth/register",
   async (data: any, { rejectWithValue }) => {
     try {
       const res = await UserRegister(data);
       if (res) {
-       showToast(res?.message, "success");
+        showToast(res?.message || "Register successfully", "success");
         return res;
       } else {
-        // showToast(res?.message, "error");
         showToast(res?.error || "Register failed!", "error");
         return rejectWithValue(res?.error || "Register failed!");
       }
@@ -60,9 +58,6 @@ export const LoginAction = createAsyncThunk(
 );
 
 
-
-
-// Slice
 const loginSlice = createSlice({
   name: "login",
   initialState,
@@ -71,21 +66,21 @@ const loginSlice = createSlice({
       return action.payload;
     },
   },
-extraReducers: (builder) => {
-  builder
-    .addCase(LoginAction.pending, (state) => {
-      state.status = "loading";
-      state.error = null;
-    })
-    .addCase(LoginAction.fulfilled, (state, action) => {
-      state.user = action.payload;
-      state.status = "succeeded";
-    })
-    .addCase(LoginAction.rejected, (state, action) => {
-      state.status = "failed";
-      state.error = (action.payload as { message: string })?.message ?? null;
-    });
-}
+  extraReducers: (builder) => {
+    builder
+      .addCase(LoginAction.pending, (state) => {
+        state.status = "loading";
+        state.error = null;
+      })
+      .addCase(LoginAction.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.status = "succeeded";
+      })
+      .addCase(LoginAction.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = (action.payload as { message: string })?.message ?? null;
+      });
+  }
 
 });
 

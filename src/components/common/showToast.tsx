@@ -15,8 +15,8 @@ export const showToast = (
     detail: message,
     life: 3000,
      style: {
-      backgroundColor: 'white', // white background
-      color: 'black',           // black text
+      backgroundColor: 'white', 
+      color: 'black',           
     },
   });
 };

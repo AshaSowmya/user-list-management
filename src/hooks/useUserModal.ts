@@ -1,4 +1,3 @@
-// src/hooks/useUserModal.ts
 'use client';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';

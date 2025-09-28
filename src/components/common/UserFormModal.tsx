@@ -37,7 +37,6 @@ export default function UserFormModal({
 }: Props) {
   const dispatch = useDispatch<AppDispatch>();
 
-  // initial values for create mode
   const emptyValues: FormValues = {
     first_name: '',
     last_name: '',
@@ -45,7 +44,6 @@ export default function UserFormModal({
     avatar: '',
   };
   
-  // ✅ Lock body scroll when modal is open
 useEffect(() => {
   if (open) {
     document.body.style.overflow = 'hidden';

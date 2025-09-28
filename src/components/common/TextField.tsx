@@ -18,7 +18,6 @@ const TextField: React.FC<TextFieldProps> = ({
 }) => {
   return (
     <div className="space-y-1">
-      {/* input + icon wrapper */}
       <div className="relative">
         {icon && (
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5 pointer-events-none">
@@ -34,7 +33,7 @@ const TextField: React.FC<TextFieldProps> = ({
         />
       </div>
 
-      {/* error message below */}
+      {/* error message */}
       <ErrorMessage
         name={name}
         component="div"

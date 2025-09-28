@@ -24,7 +24,6 @@ export default function UserCardGrid({ data, onEdit, onDelete }: Props) {
           key={user.id}
           className="relative group bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden"
         >
-          {/* Avatar */}
           <div className="flex flex-col items-center p-6">
             <img
               src={user.avatar}
@@ -36,8 +35,7 @@ export default function UserCardGrid({ data, onEdit, onDelete }: Props) {
             </p>
             <p className="text-gray-500 text-sm">{user.email}</p>
           </div>
-
-          {/* Hover overlay */}
+          
           <div className="
             absolute inset-0 bg-gray-800/70 
             flex flex-col items-center justify-center gap-4

@@ -48,8 +48,6 @@ export default function UserTable({
   };
   return (
     <div >
-
-      {/* Table view for md+ */}
       <div className="hidden md:block overflow-x-auto">
         <table className="min-w-full border-collapse">
           <thead>
@@ -97,7 +95,8 @@ export default function UserTable({
           </tbody>
         </table>
       </div>
-      {/*  Confirmation Modal */}
+      
+      {/*  Delete Confirmation Modal */}
       <ConfirmModal
         open={confirmOpen}
         title="Delete User"
@@ -105,6 +104,7 @@ export default function UserTable({
         onCancel={() => setConfirmOpen(false)}
         onConfirm={handleConfirmDelete}
       />
+      
       {/* Card view for small screens */}
       <div className="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
         {data?.map((user) => (

@@ -1,7 +1,6 @@
-import { postDataApi, postFormDataApi } from "./actions.ts";
+import { postDataApi } from "./actions.ts";
 import { URL_CONSTANTS } from "./urls.ts";
 
-//Auth Flow
 const Userlogin = async (data: any) => {
   return postDataApi(URL_CONSTANTS?.login, data);
 };

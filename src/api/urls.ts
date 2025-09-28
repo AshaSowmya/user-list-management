@@ -1,5 +1,3 @@
-
-
 export const URL_CONSTANTS: any = {
   //Auth Flow
   register: "register",

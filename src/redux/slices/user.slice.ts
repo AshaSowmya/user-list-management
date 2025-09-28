@@ -1,11 +1,9 @@
-
 import { CreateUser } from "../../api/create.ts";
 import { GetAllUser } from "../../api/list.ts";
 import { UpdateUserApi } from "../../api/update.ts";
 import { DeleteUserApi } from "../../api/delete.ts";
 import { showToast } from "../../components/common/showToast.tsx";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
 
 interface UserResponse {
   data: any[];
@@ -103,13 +101,8 @@ export const deleteUserById = createAsyncThunk(
   "users/deleteById",
   async (id: any, { rejectWithValue }) => {
     try {
-      const res = await DeleteUserApi(id);
-      // if (res) {
-        showToast("User deleted successfully", "success");
-      // } else {
-      //   showToast(res.error || "Failed to delete user.", "error");
-      //   return rejectWithValue(res.error || "Failed to delete user.");
-      // }
+      await DeleteUserApi(id);
+      showToast("User deleted successfully", "success");
     } catch (error: any) {
       return rejectWithValue(error?.response?.error || "Delete failed!");
     }
@@ -132,7 +125,6 @@ const userSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      //  FETCH USERS
       .addCase(fetchAllUsers.pending, (state) => {
         state.loading = true;
         state.error = null;
