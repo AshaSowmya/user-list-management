@@ -195,7 +195,7 @@ import { Table, LayoutGrid, Search } from 'lucide-react';
 import ConfirmModal from '../components/common/ConfirmModal.tsx';
 import debounce from 'lodash/debounce';
 
-export default function UserList({ onCreate }: { onCreate: () => void }) {
+export default function UserList() {
   const dispatch = useDispatch<AppDispatch>();
   const [page, setPage] = useState(1);
   const [view, setView] = useState<'table' | 'card'>('table');
