@@ -142,7 +142,7 @@ useEffect(() => {
                 <Button
                   type="button"
                   onClick={onClose}
-                  className="!bg-gray-300 hover:!bg-gray-400 text-black w-auto px-4"
+                  className="!bg-white border border-black !hover:bg-gray-100 !text-black w-auto px-4"
                 >
                   Cancel
                 </Button>

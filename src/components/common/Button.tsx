@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       {...props}
       disabled={props.disabled || loading}
-      className={`w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 
+      className={`w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md transition-all duration-300 flex items-center justify-center gap-2 
         disabled:opacity-60 disabled:cursor-not-allowed shadow-md hover:shadow-lg active:scale-[0.98] ${className}`}
     >
       {loading ? (
