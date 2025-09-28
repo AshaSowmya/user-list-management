@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../redux/store';
-import { deleteUserById, fetchAllUsers } from '../redux/slices/user.slice.ts';
+import { deleteUserById } from '../redux/slices/user.slice.ts';
 
 type ModalMode = 'create' | 'edit';
 
