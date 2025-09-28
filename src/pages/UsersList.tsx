@@ -40,6 +40,8 @@ export default function UserList() {
   // Fetch users from backend whenever page changes
   useEffect(() => {
     setLoading(true);
+    // Reset search when user navigates pages
+    setSearchTerm('');
     dispatch(fetchAllUsers({ page, per_page: perPage }))
       .finally(() => setLoading(false));
   }, [dispatch, page]);
