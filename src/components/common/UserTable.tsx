@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../redux/store.ts';
-import { deleteUserById, fetchAllUsers } from '../../redux/slices/user.slice.ts';
+import { deleteUserById } from '../../redux/slices/user.slice.ts';
 import ConfirmModal from './ConfirmModal.tsx';
 
 interface User {
@@ -95,7 +95,7 @@ export default function UserTable({
           </tbody>
         </table>
       </div>
-      
+
       {/*  Delete Confirmation Modal */}
       <ConfirmModal
         open={confirmOpen}

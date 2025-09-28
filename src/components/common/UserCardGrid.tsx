@@ -1,6 +1,5 @@
 'use client';
-import { useState } from "react";
-import { Pencil, Trash2 } from "lucide-react"; // lucide-react icons
+import { Pencil, Trash2 } from "lucide-react"; 
 
 interface User {
   id: number;
@@ -35,7 +34,7 @@ export default function UserCardGrid({ data, onEdit, onDelete }: Props) {
             </p>
             <p className="text-gray-500 text-sm">{user.email}</p>
           </div>
-          
+
           <div className="
             absolute inset-0 bg-gray-800/70 
             flex flex-col items-center justify-center gap-4
