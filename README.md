@@ -48,7 +48,7 @@ It is ideal for **admin dashboards** or **internal management tools**.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **React 19 + TypeScript**  
 - **Redux Toolkit** for state management  
@@ -60,7 +60,7 @@ It is ideal for **admin dashboards** or **internal management tools**.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 ```bash
