@@ -4,7 +4,7 @@ A **React + Redux** based User Management System featuring **table and card view
 
 ---
 
-## 📝 Project Description
+##  Project Description
 
 This project is a **single-page application (SPA)** developed using **React, Redux, and TypeScript**. It allows you to:
 
@@ -20,7 +20,7 @@ It is ideal for **admin dashboards** or **internal management tools**.
 
 ---
 
-## ⚙️ Features
+##  Features
 
 1. **Authentication & Private Routes**  
    - Login system using `localStorage` token.  
@@ -43,14 +43,14 @@ It is ideal for **admin dashboards** or **internal management tools**.
    - `fetchAllUsers`, `deleteUserById` implemented in slices.
 
 6. **Reusable Components**  
-   - `UserTable`, `UserCardGrid`, `Skeleton`, `UserFormModal`, `ConfirmModal`.  
+   - `UserTable`, `UserCardGrid`, `Spinner`, `Skeleton`, `UserFormModal`, `ConfirmModal`, `Button`, `TextField`, `ToastProvider`, `ConfirmModal`.  
    - Flexible hooks like `useUserModal` for modal state management.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **React 18 + TypeScript**  
+- **React 19 + TypeScript**  
 - **Redux Toolkit** for state management  
 - **React Router DOM v6** for routing  
 - **Tailwind CSS** for styling  
@@ -64,7 +64,7 @@ It is ideal for **admin dashboards** or **internal management tools**.
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/user-list-management.git
+git clone https://github.com/AshaSowmya/user-list-management.git
 cd user-list-management
 ### 2. Install dependencies
 ```bash
